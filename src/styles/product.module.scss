@@ -1,0 +1,163 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.flexContainer {
+  display: flex;
+  margin: 1.5rem 0;
+
+  aside {
+    h2 {
+      color: var(--red-800);
+      text-transform: uppercase;
+      font-size: 1.7rem;
+    }
+  }
+
+  main {
+    flex: 1;
+
+    h2 {
+      color: var(--red-800);
+      font-weight: 400;
+      font-size: 1.7rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--gray-200);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        img {
+          border: 1px solid var(--gray-200);
+          padding: 2rem 1rem;
+        }
+
+        div {
+          text-align: center;
+          width: 100%;
+
+          p {
+            color: var(--gray-600);
+            margin: 0.5rem 0;
+            text-transform: uppercase;
+          }
+  
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            strong.previowsPrice {
+              color: var(--gray-500);
+              font-size: 1rem;
+              font-weight: 400;
+              text-decoration: line-through;
+              margin-right: 1rem;
+            }
+          }
+
+          strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--red-800);
+            font-size: 1.2rem;
+          }
+  
+          button {
+            background-color: var(--cyan-300);
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            height: 2.3rem;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: 0.2s background-color;
+            text-transform: uppercase;
+  
+            &:hover {
+              background-color: var(--cyan-dark-300);
+            }
+          }
+        }
+      }
+
+      &.gridMode {
+        grid-template-columns: repeat(4, 1fr);
+        
+        li {
+          flex-direction: column;
+
+          img {
+            width: 100%;
+          }
+
+          div {
+            margin-top: auto;
+          }
+        }
+      }
+
+      &.listMode {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        li {
+          justify-content: space-between;
+          border-bottom: 1px solid var(--gray-200);
+
+          img {
+            width: 30%;
+            border: none;
+          }
+
+          div {
+            margin-right: 5rem;
+            text-align: right;
+            max-width: 50%;
+
+            button {
+              width: 10rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Adapt for tablet or less
+@media (max-width: 640px) {
+  .flexContainer {
+    flex-direction: column;
+
+    main {
+      margin-top: 2rem;
+
+      ul {
+        &.gridMode {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.listMode {
+          li {
+            div {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

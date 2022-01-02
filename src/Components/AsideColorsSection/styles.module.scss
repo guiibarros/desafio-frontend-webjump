@@ -1,0 +1,52 @@
+.asideColorsContent {
+  margin: 1rem 0;
+  
+  h3 {
+    color: var(--cyan-300);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+  }
+}
+
+
+.flexContent {
+  display: flex;
+  margin: 1rem 0;
+  gap: 0.35rem;
+
+  button {
+    flex: 1;
+    border: none;
+    font-size: 0;
+    color: transparent;
+    height: 1.7rem;
+
+    &.Preta, &.Preto {
+      background-color: var(--black);
+    }
+
+    &.Laranja {
+      background-color: var(--orange-900);
+    }
+
+    &.Amarela {
+      background-color: var(--yellow-999);
+    }
+
+    &.Rosa {
+      background-color: var(--pink-600);
+    }
+
+    &.Cinza {
+      background-color: var(--gray-600);
+    }
+
+    &.Bege {
+      background-color: rgb(214, 201, 157);
+    }
+
+    &.Azul {
+      background-color: var(--blue-700);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.asideContent {
+  border: 1px solid var(--gray-200);
+  padding: 1rem 5rem 1rem 1rem;
+  margin-right: 1.5rem;
+  max-width: 17rem;
+  width: 100%;
+  height: fit-content;
+
+  @media (max-width: 425px) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+}

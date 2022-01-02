@@ -6,10 +6,15 @@
   "dependencies": {
     "connect": "~3.6.6",
     "cors": "^2.8.5",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.45.1",
     "serve-static": "~1.13.2"
   },
   "scripts": {
-    "start": "node app.js"
+    "serve": "node app.js",
+    "dev": "next dev"
   },
   "repository": {
     "type": "git",
@@ -17,5 +22,9 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme"
+  "homepage": "https://bitbucket.org/webjump/assessment-frontend#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "typescript": "^4.5.4"
+  }
 }

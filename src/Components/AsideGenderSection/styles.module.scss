@@ -1,0 +1,30 @@
+.asideGenderContent {
+  margin: 1rem 0;
+  
+  h3 {
+    color: var(--cyan-300);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin: 1rem 1.5rem;
+
+    li {
+      margin: 0.5rem 0;
+
+      button {
+        display: block;
+        color: var(--gray-600);
+        background-color: transparent;
+        border: none;
+        transition: 0.2s color;
+
+        &:hover {
+          color: var(--gray-900);
+        }
+      }
+    }
+  }
+}

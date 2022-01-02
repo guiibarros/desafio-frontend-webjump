@@ -1,114 +1,35 @@
-# Quer ser desenvolvedor frontend na Webjump?
-Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).
+# Desafio frontend Webjump
 
-## O teste
-O desafio é tornar o layout abaixo em uma página funcional.  
-Não existe certo ou errado, queremos ver como você se sai em situações reais, como este desafio.   
-O tempo necessário para completar o desafio dependerá da sua experiência e ferramentas escolhidas.
+Desafio desenvolvido com NextJS, Typescript e Sass.
 
-Portanto, dê o seu melhor!
+![Preview](/assets/preview.jpg)
 
-:warning: **OBS:** Os layouts podem ser encontrados na pasta **layout** ou através do link: https://xd.adobe.com/view/bcf73053-f8e6-431c-9eb0-bf24304f6fff-e9a4/specs/
+## Tecnologias
 
-![Layout](assets/preview.jpg)
+- [NextJS](https://nextjs.org): Framework React que adiciona várias funcionalidades como SSR (Server-side rendering) e SSG (Static site generation), resolvendo os problemas de SEO do React.
 
-## Instruções
-- Os arquivos do layout estão no diretório assets deste repositório
-- O conteúdo não é estático. Você deve criar um JavaScript para consultar a lista de categorias a serem exibidas no menu e também para exibir os produtos das categorias.  
-Os dados serão fornecidos por uma API. As instruções estão mais abaixo.
-- Fonte padrão: "Open Sans"
-- Fonte do menu e botão de busca: "Open Sans - Extrabold"
-- As imagens dos produtos estão no diretório public/media
-- Você pode utilizar as tecnologias e bibliotecas que achar melhor (frameworks ou bibliotecas JS / CSS)
-- Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
-- Se necessário explique também como rodar o seu projeto
+- [Sass](https://sass-lang.com): Pré-processador CSS que adiciona várias funcionalidades como variáveis, herança e uma organização melhorada, tornando a manutenção de código menos complicada.
 
-## Requisitos
-- Design responsivo nos breakpoints 320px, 768px, 1024px e 1440px
-- Suporte para IE, Chrome, Safari, Firefox
-- Semântica
+- [Typescript](https://typescriptlang.org): Superset JavaScript que adiciona tipagens para a linguagem, tendo como benefício a escalabilidade.
 
-## Diferenciais
-- Uso de pré-processadores CSS (Sass, Less)
-- Acessibilidade
-- SEO
-- Performance
-- Fazer os filtros da sidebar funcionarem através de Javascript
-- Utilizar alguma automatização (Grunt, Gulp, ...)
+## Como rodar o projeto
 
-## O que será avaliado
-- Estrutura e organização do código e dos arquivos
-- Soluções adotadas
-- Tecnologias utilizadas
-- Qualidade
-- Fidelidade ao layout
-- Enfim, tudo será observado e levado em conta
+- Instale as dependências:
 
-## Como iniciar o desenvolvimento
-- Instale o [npm](https://nodejs.org/en/download/)
-- Fork este repositório na sua conta do Bitbucket
-- Crie uma branch com o nome **desafio**
-- Instale as dependências
 ```
 npm install
 ```
-- Rode a aplicação
+
+- Inicie a API:
+
 ```
-npm start
-```
-- Acesse http://localhost:8888
-- Realize o desenvolvimento na pasta public
-
-## Como enviar seu teste
-- Envie um email para [carreira@webjump.com.br] com o link do seu repositório
-
-- Se o seu repositório for privado, solicite os emails das pessoas responsáveis para conceder acesso de leitura ao seu repositório.
-
-## API
-- Categorias: http://localhost:8888/api/V1/categories/list  
-O endpoint de categoria deve ser utilizado para montar o menu do cabeçalho.
-
-**Response**
-```
-{
-  "items": [
-    {
-      "id": 1,
-      "name": "Camisetas",
-      "path": "camisetas"
-    },
-    ...
-  ]
-}
+npm run serve
 ```
 
-- Produtos da Categoria: http://localhost:8888/api/V1/categories/{id}  
-O endpoint de produtos da categoria deve ser consumido para listar os produtos da categoria quando o usuário clicar em um dos menus.
+- Rode a aplicação:
 
-**Response**
 ```
-{
-  "filters": [
-      {
-          "color": "Cor"
-      }
-  ],
-  "items": [
-    {
-      "id": 31,
-      "sku": "sku-31",
-      "path": "tenis-preto-couro",
-      "name": "Tênis Preto Couro",
-      "image": "media/shoes-1.jpg",
-      "price": 129.9,
-      "specialPrice": 80, //Optional
-      "filter": [
-        {
-          "color": "Preta"
-        }
-      ]
-    },
-    ...
-  ]
-}
+npm run dev
 ```
+
+- Acesse a aplicação em: http://localhost:3000

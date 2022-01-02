@@ -1,0 +1,41 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.flexContainer {
+  display: flex;
+  margin: 1.5rem 0;
+
+  main {
+    flex: 1;
+
+    .thumb {
+      background-color: var(--gray-400);
+      height: 18rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .welcome {
+      h2 {
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        text-align: justify;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .flexContainer {
+    aside {
+      display: none;
+    }
+  }
+}

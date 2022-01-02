@@ -1,0 +1,179 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginContent {
+  background-color: var(--gray-900);
+  color: var(--white);
+  text-align: right;
+  padding: 0.4rem 0;
+
+  a {
+    font-weight: 800;
+    text-decoration: underline;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.logoContent {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  min-height: 6.5rem;
+
+  .hamburguerButton {
+    display: none;
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+
+    div {
+      width: 2rem;
+      height: 0.3rem;
+      background-color: var(--black);
+
+      & + div {
+        margin-top: 0.4rem;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      width: 200px;
+    }
+  }
+
+  .search {
+    input {
+      width: 20rem;
+      height: 2.5rem;
+      padding: 0 1rem;
+      border: 1px solid #888;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      &:hover {
+        border: 1px solid #333;
+      }
+    }
+
+    button {
+      background-color: var(--red-800);
+      height: 2.5rem;
+      width: 6rem;
+      border: 1px solid var(--red-dark-800);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      color: var(--white);
+      font-weight: 800;
+      text-transform: uppercase;
+      transition: 0.2s background-color;
+
+      &:hover {
+        background-color: var(--red-dark-800);
+      }
+    }
+  }
+
+  .mobileSearchButton {
+    width: 1.8rem;
+    border: none;
+    background-color: transparent;
+    display: none;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.navContent {
+  background-color: var(--red-800);
+  padding: 1rem 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin: 0 1.3rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        padding: 1rem;
+        color: var(--white);
+        font-weight: 800;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s border;
+
+        &:hover {
+          border-bottom: 3px solid var(--red-800);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .logoContent {
+    .search {
+      display: none;
+    }
+
+    .hamburguerButton {
+      display: block;
+    }
+
+    .mobileSearchButton {
+      display: block;
+    }
+  }
+
+  .navContent {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -200px;
+    background-color: var(--white);
+    box-shadow: 0 5px 10px #3333;
+
+    &.mobileMenuOpened {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 0;
+    }
+
+    ul {
+      li {
+        display: block;
+        margin: 1rem 0;
+
+        a {
+          color: var(--gray-900);
+          border-bottom: none;
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

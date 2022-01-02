@@ -1,0 +1,19 @@
+.breadcrumb {
+  margin-top: 2rem;
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    opacity: 0.5;
+    font-size: 0.8rem;
+  }
+
+  strong {
+    color: var(--red-800);
+    font-weight: 400;
+  }
+}
